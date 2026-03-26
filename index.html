@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentFlow | TiDB Cloud Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs"><div class="blob1"></div><div class="blob2"></div></div>
+    <div class="container">
+        <header>
+            <div class="logo"><span>🎓</span> StudentFlow</div>
+            <div class="db-status"><span class="status-dot"></span> TiDB Cloud Connected</div>
+        </header>
+        <main>
+            <section class="stats">
+                <div class="stat-card"><h3>Students</h3><p id="total-students">0</p></div>
+                <div class="stat-card"><h3>Avg Marks</h3><p id="avg-marks">0%</p></div>
+                <div class="stat-card action-card" onclick="openModal()"><h3>New Entry</h3><p>+</p></div>
+            </section>
+            <section class="table-container glass">
+                <table>
+                    <thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Course</th><th>Marks</th><th>Actions</th></tr></thead>
+                    <tbody id="student-table-body"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <div id="student-modal" class="modal">
+        <div class="modal-content glass">
+            <h2 id="modal-title">Student Details</h2>
+            <form id="student-form">
+                <input type="hidden" id="student-id">
+                <input type="text" id="name" required placeholder="Name">
+                <input type="number" id="age" required placeholder="Age">
+                <input type="text" id="course" required placeholder="Course">
+                <input type="number" id="marks" required placeholder="Marks">
+                <div class="form-actions"><button type="button" onclick="closeModal()">Cancel</button><button type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

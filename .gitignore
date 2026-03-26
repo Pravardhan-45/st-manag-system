@@ -1,0 +1,12 @@
+*.class
+mysql-connector-j-*.jar
+run.bat
+setup.sql
+.DS_Store
+.vscode/
+bin/
+# Presentation files
+presentation_guide.md
+walkthrough.md
+implementation_plan.md
+task.md
