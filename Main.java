@@ -17,7 +17,7 @@ public class Main {
 
     private static int getPort() {
         String port = System.getenv("PORT");
-        return (port != null) ? Integer.parseInt(port) : 8080;
+        return (port != null) ? Integer.parseInt(port) : 7860;
     }
 
     public static void main(String[] args) throws IOException {

@@ -17,7 +17,7 @@ COPY --from=build /app/*.css /app/
 COPY --from=build /app/*.js /app/
 COPY --from=build /app/mysql-connector-j-8.3.0.jar /app/
 
-# Port is typically handled by Render via the PORT env var
-EXPOSE 8080
+# Port is typically handled by Hugging Face via the PORT env var (default 7860)
+EXPOSE 7860
 
 CMD ["java", "-cp", ".:mysql-connector-j-8.3.0.jar", "Main"]
