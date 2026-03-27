@@ -16,12 +16,12 @@
         <main>
             <section class="stats">
                 <div class="stat-card"><h3>Students</h3><p id="total-students">0</p></div>
-                <div class="stat-card"><h3>Avg Marks</h3><p id="avg-marks">0%</p></div>
+                <div class="stat-card"><h3>Avg Percentage</h3><p id="avg-marks">0%</p></div>
                 <div class="stat-card action-card" onclick="openModal()"><h3>New Entry</h3><p>+</p></div>
             </section>
             <section class="table-container glass">
                 <table>
-                    <thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Course</th><th>Marks</th><th>Actions</th></tr></thead>
+                    <thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Course</th><th>Percentage</th><th>Actions</th></tr></thead>
                     <tbody id="student-table-body"></tbody>
                 </table>
             </section>
@@ -35,7 +35,7 @@
                 <input type="text" id="name" required placeholder="Name">
                 <input type="number" id="age" required placeholder="Age">
                 <input type="text" id="course" required placeholder="Course">
-                <input type="number" id="marks" required placeholder="Marks">
+                <input type="number" id="marks" required placeholder="Percentage">
                 <div class="form-actions"><button type="button" onclick="closeModal()">Cancel</button><button type="submit">Save</button></div>
             </form>
         </div>
