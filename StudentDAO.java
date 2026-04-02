@@ -7,12 +7,9 @@ import java.util.List;
 
 public class StudentDAO {
     // Note: We use environment variables for security when deploying to the cloud.
-    private static final String URL = System.getenv("TIDB_URL") != null ? 
-            System.getenv("TIDB_URL") : "jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/test?useSSL=true&tinyInt1isBit=false";
-    private static final String USER = System.getenv("TIDB_USER") != null ? 
-            System.getenv("TIDB_USER") : "2sXLGpohmYwBieY.root";
-    private static final String PASSWORD = System.getenv("TIDB_PASSWORD") != null ? 
-            System.getenv("TIDB_PASSWORD") : "LSvSJ9i4mLinzeEI";
+    private static final String URL = System.getenv("TIDB_URL");
+    private static final String USER = System.getenv("TIDB_USER");
+    private static final String PASSWORD = System.getenv("TIDB_PASSWORD");
 
     public Connection getConnection() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
